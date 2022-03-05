@@ -84,8 +84,10 @@ def Graph_Monthly_Totals():
     input("Press any key to continue...")
     print()
 
-    # Return/display the graph to the user (A return statement isn't used because
-    # it made the graph lag and stop responding when closed on other team members computers)
+    # Return/display the graph to the user 
+    # (The return statement is blank because passing plt.show() through it made the
+    # graph lag and stop responding when closed on other team members computers)
+    
     plt.show()
     
     # Blank return statement is used to go back to main menu
