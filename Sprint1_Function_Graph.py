@@ -1,10 +1,7 @@
-# [ *** Delete these after reading ***
-# | *** Here is my function for Option 4 - Graph Monthly Claim Totals. ***
-# [ *** Please make sure that 'import matplotlib.pyplot as plt' is at the top of the main program. ***
-
 
 
 def Graph_Monthly_Totals():
+
     # Written By: Makenzie Roberts
     # Last Edited: Feb 28, 2022
 
@@ -18,21 +15,20 @@ def Graph_Monthly_Totals():
     # Returns:
     #   Returns a graph, created using matplotlib library.
 
-
     # Create lists that contain data for X and Y axis
     month_list = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"]
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"]
 
     # Y is initialized and empty so we can append user input
     y = []
@@ -53,10 +49,12 @@ def Graph_Monthly_Totals():
         inputOk = False
         while not inputOk:
             try:
-                monthValue = int(input("Enter the amount for {}: ".format(month_list[monthNum])))
+                monthValue = float(input("Enter the amount for {}: ".format(month_list[monthNum])))
                 inputOk = True
             except:
-                print("The value for {} must be a valid number and cannot contain special characters. Please re-enter.".format(month_list[monthNum]))
+                print(
+                    "The value for {} must be a valid number and cannot contain special characters. Please re-enter.".format(
+                        month_list[monthNum]))
             else:
                 y.append(monthValue)
                 monthNum += 1
@@ -70,7 +68,6 @@ def Graph_Monthly_Totals():
         month_abbrev_list.append(abbrev)
         monthNum += 1
 
-
     # Set up the graph
     xAxis = month_abbrev_list
     yAxis = y
@@ -83,10 +80,15 @@ def Graph_Monthly_Totals():
 
     # Prompts user to press any key to continue
     print()
+    print("Close graph to return to main menu")
     input("Press any key to continue...")
     print()
 
-    # Return/display the graph to the user
-    showGraph = plt.show()
-    return showGraph
+    # Return/display the graph to the user (A return statement isn't used because
+    # it made the graph lag and stop responding when closed on other team members computers)
+    plt.show()
+    
+    # Blank return statement is used to go back to main menu
+    return
 
+    
