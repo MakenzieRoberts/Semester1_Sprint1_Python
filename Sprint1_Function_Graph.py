@@ -14,6 +14,10 @@ def Graph_Monthly_Totals():
 
     # Returns:
     #   Returns a graph, created using matplotlib library.
+    
+    #   NOTE: Returning the graph directly (return plt.show), or assigning it to a variable and returning that variable
+    #   was causing the graph to stop responding when tested on other team member's computers, so it was removed.
+    #   The program still functions as intended despite this change.
 
     # Create lists that contain data for X and Y axis
     month_list = [
@@ -79,6 +83,7 @@ def Graph_Monthly_Totals():
     plt.grid(True)
 
     # Prompts user to press any key to continue
+
     print()
     print("Close graph to return to main menu")
     input("Press any key to continue...")
@@ -89,8 +94,8 @@ def Graph_Monthly_Totals():
     # graph lag and stop responding when closed on other team members computers)
     
     plt.show()
-    
-    # Blank return statement is used to go back to main menu
+   
+    # Blank return statement is used to exit function and return to main menu
     return
 
     
