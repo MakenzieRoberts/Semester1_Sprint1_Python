@@ -16,7 +16,7 @@ def dollar_format(num):
     #   Returns the numerical value as a string, formatted to look like a dollar value.
     #   Eg. The argument 123456 is returned as $123,456.00
 
-    formatStr = "{:,.2f}".format(num)
+    formatStr = "${:,.2f}".format(num)
 
     return formatStr
 
